@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Texto</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/favicon.ico">
+    <title>Encriptador de Texto </title>
 </head>
 <body>
-    
+    <header>
+
+    </header>
+    <!--Seccion Principal-->
+    <main>
+        <img class="logo-alura" src="./assets/logo.svg" alt="Logo de Alura">
+        <section class="encriptador">
+            <textarea class="encriptar" cols="40" rows="20" placeholder="Ingrese el texto aquí..."></textarea>
+            <div class="encriptador-aviso">
+                <img  class="imagen-aviso" src="./assets/aviso.svg" alt="Imagen de Info">
+                <p class="texto-aviso">Ingresar sólo letras minúsculas y sin acento</p>
+            </div>
+
+            <div class="encriptador-contenedor">
+                <button class="boton-encriptar" type="submit" >Encriptar</button>
+                <button class="boton-desencriptar" type="submit">Desencriptar</button>
+            </div>
+
+        </section>
+
+        <section class="desencriptador">
+            <div class="desencriptador-tarjeta">
+                <img class="imagen-munieco" src="./assets/muñeco.svg" alt="Imagen de Muñeco">
+                <p class="texto1">Ningún mensaje fue encontrado</p>
+                <p class="texto2">Ingrese el texto para Encriptar o Desencriptar</p>
+            </div>
+            <textarea class="evaluar-texto" type="mensaje" readonly></textarea>
+
+        </section>
+
+    </main>
+    <footer>
+        <p class="copyright">&copy; copyright 2024 - Encriptador de Texto - Desarrollado por Juan José Dichiara</p>
+        <a href="" rel="">
+            <img class="linkedin" src="./assets/linkedin.svg" alt="Logo Linkedin">
+            <img class="github" src="./assets/github.svg" alt="Logo GitHub">
+        </a>
+    </footer>
 </body>
 </html>

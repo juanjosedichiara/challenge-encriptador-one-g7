@@ -1,0 +1,13 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.logo-alura{
+    padding: 1%;
+    margin: 1%;
+}
+
+body{
+    background-color:aquamarine;
+}
