@@ -1,13 +1,73 @@
+/*Fuente del Proyecto*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Declaración de variables Globales*/
+:root{
+    --color-fondo:#F3F5FC;
+    --color-blanco: #FFFFFF;
+    --color-dark-blue: #0A3871;
+    --color-light-blue: #D8DFE8;
+    --color-gris: #495057;
+    --fuente: 'Inter', sans-serif;
+}
+
+/*Modificador global o Reset*/
 *{
     padding: 0%;
     margin: 0%;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--fuente);
 }
 
-.logo-alura{
-    padding: 1%;
-    margin: 1%;
+header .logo-alura{
+    display: flex;
+    padding: 1.5%;
+    margin: 1.5%;
+}
+
+img{
+    max-width: 100%;
 }
 
 body{
-    background-color:aquamarine;
+    height: 100%;;
+    background-color:var(--color-fondo);
+
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.encriptar{
+    width: 80%;
+    height: 60%;
+    margin: 0px 0px 0px 150px;
+    font-size: 32px;
+    color: var(--color-dark-blue);
+    background-color: transparent;
+    border: none;
+}
+
+.encriptar::placeholder{
+    color: var(--color-dark-blue);
+}
+
+.encriptador-aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0%;
+    margin: 0px 0px 0px 150px;
+    gap: 10px;
+    position: absolute;
+    top: 450px;
+}
+
+.texto-aviso{
+    width: 100%;
+    font-size: 12px;
+    color: var(--color-gris);
 }
