@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" href="./assets/favicon.ico">
-    <title>Encriptador de Texto </title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Encriptador de Texto</title>
 </head>
 <body>
     <header>
@@ -15,13 +15,14 @@
     <!--Seccion Principal-->
     <main>
         <section class="encriptador">
-            <textarea class="encriptar" placeholder="Ingrese el texto aquí..."></textarea>
+            <textarea class="encriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí..."></textarea>
+            <img class="img-munieco" src="./assets/muñeco.svg" alt="Muñeco">
             <div class="encriptador-aviso">
                 <img  class="imagen-aviso" src="./assets/aviso.svg" alt="Imagen de Info">
                 <p class="texto-aviso">Ingresar sólo letras minúsculas y sin acento</p>
             </div>
 
-            <div class="encriptador-contenedor">
+            <div class="botones">
                 <button class="boton-encriptar" type="submit" >Encriptar</button>
                 <button class="boton-desencriptar" type="submit">Desencriptar</button>
             </div>
@@ -29,13 +30,13 @@
         </section>
 
         <section class="desencriptador">
+            <textarea class="evaluar-texto" cols="50" rows="25"></textarea>
             <div class="desencriptador-tarjeta">
-                <img class="imagen-munieco" src="./assets/muñeco.svg" alt="Imagen de Muñeco">
                 <p class="texto1">Ningún mensaje fue encontrado</p>
                 <p class="texto2">Ingrese el texto para Encriptar o Desencriptar</p>
+                <button class="copiar">Copiar</button>
             </div>
-            <textarea class="evaluar-texto" type="mensaje" readonly></textarea>
-
+            
         </section>
 
     </main>
@@ -46,5 +47,6 @@
             <img class="github" src="./assets/github.svg" alt="Logo GitHub">
         </a>
     </footer>
+    <script src="encriptador.js"></script>
 </body>
 </html>
