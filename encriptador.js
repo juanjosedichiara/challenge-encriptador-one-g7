@@ -17,8 +17,8 @@ const btnEncriptar = document.querySelector(".boton-encriptar");
 const txtEncriptar = document.querySelector(".encriptar");
 const aviso = document.querySelector(".texto-aviso");
 const respuesta = document.querySelector(".evaluar-texto");
-const contenido = document.querySelector(".desencriptador");
-const btnCopiar = document.querySelector(".boton-Copiar");
+const contenido = document.querySelector(".desencriptador-tarjeta");
+const btnCopiar = document.querySelector(".boton-copiar");
 const btnDesencriptar = document.querySelector(".boton-desencriptar");
 
 btnEncriptar.addEventListener("click", e => {
@@ -64,8 +64,8 @@ btnEncriptar.addEventListener("click", e => {
         texto = texto.replace(/u/mg, "ufat");
 
         respuesta.innerHTML = texto;
-        btnCopiar.style.visibility ="inherit";
         contenido.remove();
+        btnCopiar.style.visibility ="inherit";
     }
 });
 

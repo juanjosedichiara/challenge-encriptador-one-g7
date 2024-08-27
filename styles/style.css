@@ -2,107 +2,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /*Declaración de variables Globales*/
-:root{
-    --color-fondo:#F3F5FC;
+:root {
+    --color-fondo: #F3F5FC;
     --color-blanco: #FFFFFF;
     --color-dark-blue: #0A3871;
-    --color-medium-blue:#0A38718A;
+    --color-medium-blue: #0A38718A;
     --color-light-blue: #D8DFE8;
     --color-gris: #495057;
-    --color-medio-gris:#67808E;
-    --color-white-blue:#E8DFE8;
+    --color-medio-gris: #67808E;
+    --color-gris-claro:#495057;
+    --color-dark-gris: #343A40;
+    --color-white-blue: #E8DFE8;
     --fuente: 'Inter', sans-serif;
 }
 
 /*Modificador global o Reset*/
-*{
+* {
     padding: 0%;
     margin: 0%;
     text-decoration: none;
     box-sizing: border-box;
     font-family: var(--fuente);
+    background: var(--color-blanco);
 }
 
-header .logo-alura{
-    display: flex;
-    padding: 1.5%;
-    margin: 1.5%;
+::selection {
+    background: var(--color-dark-blue);
+    color: var(--color-blanco);
+
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-body{
-    height: 100%;;
-    background-color:var(--color-fondo);
-
+body {
+    height: 100%;
 }
 
-main{
+/*---ENCABEZADO---*/
+
+header {
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo-alura {
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+/*---SECCION PRINCIPAL---*/
+
+main {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    margin-left: 50px;
+    background: url(../assets/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.encriptador{
-    margin: 0px 25px 0px 0px;
+.encriptador {
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
 }
 
-.encriptar{
-    width: 80%;
-    height: 60%;
-    margin: 0px 0px 0px 120px;
+.encriptar {
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    margin: 0px 0px 0px 0px;
     font-size: 32px;
+    line-height: 48px;
+    outline: none;
     color: var(--color-dark-blue);
     background-color: transparent;
-    border: none;
-    /*text-transform: lowercase*/;
+    border: 1px solid var(--color-gris);
+    border-radius: 15px;
+    resize: none;
 }
 
-.encriptar::placeholder{
+.encriptar::placeholder,
+:focus {
     color: var(--color-dark-blue);
 }
 
-.encriptar:focus{
+.encriptar:focus {
     outline: none;
 }
 
-.encriptador-aviso{
+.encriptador-aviso {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0%;
+    padding: 0;
     margin: 0px 0px 0px 120px;
-    gap: 10px;
-    top: 450px;
+    position: absolute;
+    gap: 8px;
+    top: 500px;
 }
 
-.texto-aviso{
+.texto-aviso {
     width: 100%;
-    font-size: 12px;
+    font-size: 18px;
     font-style: normal;
-    color: var(--color-gris);
+    font-weight: 400;
+    color: var(--color-medio-gris);
     opacity: 0.8;
     line-height: 150%;
 }
 
-.botones{
-    height: 70px;
+.botones {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    margin-top: 20px;
-    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+    /*justify-content: space-between;*/
 }
-.boton-encriptar{
+
+.boton-encriptar {
     width: 328px;
+    height: 67px;
     padding: 24px;
     font-size: 16px;
     font-weight: 400;
     font-family: var(--fuente);
     font-style: normal;
+    line-height: 19px;
     background: var(--color-dark-blue);
     text-align: center;
     color: var(--color-blanco);
@@ -112,20 +143,21 @@ main{
     box-shadow: 0px 20px 29px -5px rgba(0, 0, 0, 0.08);
 }
 
-.boton-encriptar:active{
-    box-shadow: inset 2px 2px 4px var(--color-fondo)
-    inset -3px -4px -8px var(--color-dark-blue);
-    color: var(--color-white-blue); 
-
+.boton-encriptar:active {
+    box-shadow: inset 2px 2px 4px var(--color-fondo),
+        inset -3px -4px -8px var(--color-dark-blue);
+    color: var(--color-white-blue);
 }
 
-.boton-desencriptar{
+.boton-desencriptar {
     width: 328px;
+    height: 67px;
     padding: 24px;
     font-size: 16px;
     font-weight: 400;
     font-family: var(--fuente);
     font-style: normal;
+    line-height: 19px;
     background: var(--color-white-blue);
     text-align: center;
     color: var(--color-dark-blue);
@@ -135,99 +167,104 @@ main{
     box-shadow: 0px 20px 29px -5px rgba(0, 0, 0, 0.08);
 }
 
-.boton-desencriptar:active{
-    box-shadow: inset 2px 2px 4px var(--color-dark-blue)
-    inset -3px -4px -8px var(--color-fondo);
-    color: var(--color-medium-blue); 
-
+.boton-copiar:active,
+.boton-desencriptar:active {
+    box-shadow: inset 2px 2px 4px var(--color-dark-blue),
+        inset -3px -4px -8px var(--color-fondo);
+    color: var(--color-medium-blue);
 }
 
-
-.desencriptador-tarjeta{
-    /*display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;*/
-
-    text-align: center;
+.desencriptador {
+    width: 270px;
+    height: 580px;
+    background: var(--color-fondo);
+    box-shadow: 10px 24px 32px -8px var(--color-dark-gris);
     position: relative;
-    top:300px;
-    left: 50px;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
 }
 
-.texto1{
+.desencriptador-tarjeta {
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--color-fondo);
+}
+
+.img-munieco{
+    background: var(--color-fondo);
+}
+
+.texto1 {
     font-weight: bold;
     font-style: normal;
     font-size: 18px;
+    line-height: 120%;
     text-align: center;
     color: var(--color-gris);
-    background: transparent;
-    
+    background: var(--color-fondo);
 }
 
-.texto2{
+.texto2 {
     font-style: italic;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
     text-align: center;
     color: var(--color-medio-gris);
-    background: transparent;
-    line-height: 150%;
-    text-align: center;
+    background: var(--color-fondo);
 }
 
-.evaluar-texto{
-    width: 30%;
-    height: 450px;
+.evaluar-texto {
+    width: 100%;
+    height: 485px;
     position: absolute;
-    resize: vertical;
     padding: 20px;
+    top: 0;
+    left: 0;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    background: var(--color-blanco);
-    background-image: url(/assets/muñeco.svg);
-    background-repeat: no-repeat;
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
     border: none;
-    border-radius: 24px;
-    color: var(--color-dark-blue);
+    color: var(--color-gris-claro);
+    resize: none;
 }
 
-.evaluar-texto:focus{
+.evaluar-texto:focus {
     outline: none;
 }
 
-.copiar{
-    width: 200px;
-    height: 40px;
+.boton-copiar {
+    width: 224px;
+    height: 67px;
     font-size: 16px;
     text-align: center;
-    line-height: 16px;
+    line-height: 19px;
+    bottom: 0;
+    left: 0;
     background: var(--color-light-blue);
     font-family: var(--fuente);
     color: var(--color-dark-blue);
     border: var(--color-dark-blue) solid 1px;
-    border-radius: 24px;
+    border-radius: 20px;
     cursor: pointer;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    visibility: visible;
+    margin: 23px;
+    padding: 24px;
+    position: absolute;
+    visibility: hidden;
 }
 
-.copiar:active{
-    box-shadow: inset 2px 2px 4px var(--color-dark-blue)
-    inset -3px -4px -8px var(--color-fondo);
-    color: var(--color-medium-blue); 
-
+.boton-encriptar:hover,
+.boton-desencriptar:hover,
+.boton-copiar:hover {
+    transform: scale(0.97);
 }
 
-.boton-encriptar:hover, .boton-desencriptar:hover, .copiar:hover{
-transform: scale(0.97);
-}
-
-footer{
+footer {
     margin-top: 15px;
     padding: 10px;
     border-top: 2px solid var(--color-medio-gris);
@@ -238,31 +275,26 @@ footer{
     font-weight: 700;
 }
 
-.linkedin:hover{
-color: var(--color-fondo);
-opacity: 0.8;
+.linkedin:hover {
+    color: var(--color-fondo);
+    opacity: 0.8;
 }
 
-.github:hover{
-color: var(--color-fondo);
-opacity: 0.6;
-}
-a{
-    display: flex;
-    justify-content: center;
-    gap:24px;
-
+.github:hover {
+    color: var(--color-fondo);
+    opacity: 0.6;
 }
 
 /*--------MEDIA-------*/
 @media (max-width:1250px) {
-    main{
+    main {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-    .encriptador{
+
+    .encriptador {
         margin: 168px 0px 0px 0px;
         display: flex;
         flex-direction: column;
@@ -270,25 +302,26 @@ a{
         width: 100%;
     }
 
-    .botones{
+    .botones {
         display: flex;
         align-items: center;
         position: inherit;
     }
 
-    .encriptador-aviso{
+    .encriptador-aviso {
         position: inherit;
         margin: 15px;
     }
 
-    .desencriptador{
+    .desencriptador {
         width: 665px;
         height: 300px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
     }
-    .desencriptador-tarjeta{
+
+    .desencriptador-tarjeta {
         display: block;
         justify-content: center;
         align-items: center;
@@ -297,41 +330,47 @@ a{
         bottom: 20%;
         font-size: 24px;
         font-weight: 700;
-        background-image: none;
     }
-    .imagen-munieco{
+
+    .img-munieco {
         display: none;
     }
-    .copiar{
+
+    .boton-copiar {
         position: inherit;
         width: 100%;
     }
 
-    .evaluar-texto{
+    .evaluar-texto {
         width: 100%;
         height: 210px;
         padding: 10px;
     }
-    
+
 }
 
-@media(max-width:720px){
-    header .logo-alura{
-        width: 10%;
+@media(max-width:720px) {
+    header .logo-alura {
+        width: 100%;
         background: var(--color-blanco);
         padding: 2px;
     }
-    .encriptar{
+
+    .encriptar {
         width: 90%;
         font-size: 24px;
     }
-    .encriptador-aviso{
+
+    .botones{
         display: grid;
+        gap: 21px;
     }
-    .desencriptador-tarjeta{
+
+    .desencriptador{
         width: 90%;
     }
-    .copyright{
+
+    .copyright {
         font-size: 20px;
     }
 }
